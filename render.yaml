@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: novarsis-seo-analyzer
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: SEMRUSH_API_KEY
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+      - key: PORT
+        value: 10000
